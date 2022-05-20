@@ -126,54 +126,35 @@ numbers that appear on the two dice. Find the mean or expectation of X.
 \section{Solution} 
 \begin{frame}{Solution}
 The sample space of the experiment consists of 36 elementary events in the
-form of ordered pairs ($x_i, y_i$), where $x_i $= 1, 2, 3, 4, 5, 6 and $y_i$ = 1, 2, 3, 4, 5, 6.\\
-The random variable X i.e.\ the sum of the numbers on the two dice takes the
-values 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 or 12.\\
+form of ordered pairs ($y_1, y_2$), where $y_1 $= 1, 2, 3, 4, 5, 6 and $y_2$ = 1, 2, 3, 4, 5, 6.\\
+The random variable will be $X = y_1+y_2$ \\
 Now
 \begin{align}
-&\Pr(X = 2) = \Pr({(1,1)}) = \frac{1}{36}\\
-&\Pr(X = 3) = \Pr({(1,2), (2,1)}) = \frac{2}{36}\\ 
-&\Pr(X = 4) = \Pr({(1,3), (2,2), (3,1)}) = \frac{3}{36}\\
-&\Pr(X = 5) = \Pr({(1,4), (2,3), (3,2), (4,1)}) \nonumber\\ 
-&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~= \frac{4}{36}\\
-\end{align}
-\end{frame}
-\begin{frame}
-\begin{align}
-&\Pr(X = 6) = \Pr((1,5), (2,4), (3,3), (4,2), \nonumber\\
-& ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(5,1)) = \frac{5}{36}\\
-&\Pr(X = 7) = \Pr((1,6), (2,5), (3,4), (4,3),\nonumber\\
-&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(5,2), (6,1)) = \frac{6}{36}\\  
-&\Pr(X = 8) = \Pr((2,6), (3,5), (4,4), (5,3),\nonumber\\ 
-&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(6,2)) = \frac{5}{36}\\   
-&\Pr(X = 9) = \Pr({(3,6), (4,5), (5,4), (6,3)}) \nonumber\\
-&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~= \frac{4}{36}\\ 
-&\Pr(X = 10) = \Pr({(4,6), (5,5), (6,4)}) = \frac{3}{36}\\
-&\Pr(X = 11) = \Pr({(5,6), (6,5)}) = \frac{2}{36}\\  
-\end{align}
-\end{frame}
-\begin{frame}
-\begin{align}
-&\Pr(X = 12) = \Pr({(6,6)}) = \frac{1}{36} 
+  P(X = y_1 + y_2)= \frac{1}{36} \times
+  \begin{cases}
+    X-1 & X \in [2,7]\\
+    13-X & X \in [8,12]\\
+    0 & \text{else}
+  \end{cases}
 \end{align}    
-The probability distribution of X is  
-\begin{table}[ht!]  
-\resizebox{12cm}{!}{
-\input{tables/table6.tex}\label{Table 1}	
-}
-\end{table}
+% The probability distribution of X is  
+% \begin{table}[ht!]  
+% \resizebox{12cm}{!}{
+% \input{tables/table6.tex}\label{Table 1}	
+% }
+% \end{table}
+\end{frame}
+\begin{frame}
 Therefore,\\
 \begin{align}
-    &\mu = E(x) = \sum_{i=1}^{n}{x_i}{p_i}  = 2\times\frac{1}{36}+3\times\frac{2}{36}+4\times\frac{3}{36}+\nonumber\\
-    &~~~~~5\times\frac{4}{36}+6\times\frac{5}{36}+7\times\frac{6}{36}+8\times\frac{5}{36}+9\times\frac{4}{36}+\nonumber\\
-    &~~~~~~~~~~~~~~~~10\times\frac{3}{36}+11\times\frac{2}{36}+12\times\frac{1}{36}\\
-\end{align}
-\end{frame}
-\begin{frame}
-\begin{align}
-    &=\frac{2+6+12+20+30+42+40+36+30+22+12}{36}\\
-    &~~~~~~~~~~~~~~~~~~~~~~~~~~= 7
+     \mu = E(x) = \sum_{i=1}^{n}{x_i}{p_i}  = \frac{1}{36}(\sum_{k=2}^{7}k(k-1) + \sum_{k=8}^{12}k(13-k))\\
+     = \frac{252}{36} = 7
+    %  2\times\frac{1}{36}+3\times\frac{2}{36}+4\times\frac{3}{36}+\nonumber\\
+    % &~~~~~5\times\frac{4}{36}+6\times\frac{5}{36}+7\times\frac{6}{36}+8\times\frac{5}{36}+9\times\frac{4}{36}+\nonumber\\
+    % &~~~~~~~~~~~~~~~~10\times\frac{3}{36}+11\times\frac{2}{36}+12\times\frac{1}{36}\\
+%     &=\frac{2+6+12+20+30+42+40+36+30+22+12}{36}\\
+%     &~~~~~~~~~~~~~~~~~~~~~~~~~~= 7
 \end{align}
 Thus, the mean of the sum of the numbers that appear on throwing two fair dice is 7.
-\end{frame}
+\end{frame} 
 \end{document}   
