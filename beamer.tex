@@ -29,9 +29,6 @@
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
-% \renewcommand\thesectiondis{\arabic{section}}
-% \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
-% \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
 \hyphenation{op-tical net-works semi-conduc-tor}
  \def\inputGnumericTable{}                                 %%
 \lstset{ 
@@ -39,14 +36,6 @@ frame=single,
 breaklines=true,
 columns=fullflexible
 }
-
-% \newtheorem{theorem}{Theorem}[section]
-% \newtheorem{problem}{Problem}
-% \newtheorem{proposition}{Proposition}[section]
-% \newtheorem{lemma}{Lemma}[section]
-% \newtheorem{corollary}[theorem]{Corollary}
-% \newtheorem{example}{Example}[section]
-% \newtheorem{definition}[problem]{Definition}
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
@@ -110,14 +99,6 @@ columns=fullflexible
 \begin{frame}{Outline}
   \tableofcontents
 \end{frame}
-% Download all python codes from 
-% \begin{lstlisting}
-% https://github.com/GunjitMittal/Assignment6/tree/main/Assignment6/code
-% \end{lstlisting}
-% Download all latex codes from 
-% \begin{lstlisting}
-% https://github.com/GunjitMittal/Assignment6/tree/main/Assignment6 
-% \end{lstlisting} 
 \section{Question}
 \begin{frame}{Question}
 Let a pair of dice be thrown and the random variable X be the sum of the
@@ -137,23 +118,12 @@ Now
     0 & \text{else}
   \end{cases}
 \end{align}    
-% The probability distribution of X is  
-% \begin{table}[ht!]  
-% \resizebox{12cm}{!}{
-% \input{tables/table6.tex}\label{Table 1}	
-% }
-% \end{table}
 \end{frame}
 \begin{frame}
 Therefore,\\
 \begin{align}
      \mu = E(x) = \sum_{i=1}^{n}{x_i}{p_i}  = \frac{1}{36}(\sum_{k=2}^{7}k(k-1) + \sum_{k=8}^{12}k(13-k))\\
      = \frac{252}{36} = 7
-    %  2\times\frac{1}{36}+3\times\frac{2}{36}+4\times\frac{3}{36}+\nonumber\\
-    % &~~~~~5\times\frac{4}{36}+6\times\frac{5}{36}+7\times\frac{6}{36}+8\times\frac{5}{36}+9\times\frac{4}{36}+\nonumber\\
-    % &~~~~~~~~~~~~~~~~10\times\frac{3}{36}+11\times\frac{2}{36}+12\times\frac{1}{36}\\
-%     &=\frac{2+6+12+20+30+42+40+36+30+22+12}{36}\\
-%     &~~~~~~~~~~~~~~~~~~~~~~~~~~= 7
 \end{align}
 Thus, the mean of the sum of the numbers that appear on throwing two fair dice is 7.
 \end{frame} 
